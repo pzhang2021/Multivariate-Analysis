@@ -1,0 +1,13 @@
+data = read.table("Employment.txt", header=T)
+# (a)
+p = prcomp(data[,2:10])
+summary(p)
+plot(p)
+# (b)
+p2 = prcomp(data[,2:10], scale. = TRUE)
+summary(p2)
+plot(p2)
+abline(h=1, col="red", lty= 1)
+# (c)
+# (d)
+p$rotation
